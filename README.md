@@ -12,6 +12,8 @@ DaVinci Resolve용 타이틀·Fusion 매크로와 실제 제작에서 검증한 
 
 ## 설치
 
+[v0.1.0 다운로드](https://github.com/yiimjoon/fusionmotion/releases/tag/v0.1.0)에서 전체 설치 ZIP을 내려받아 압축을 풀고 아래 명령을 실행합니다. CodexTypo를 포함한 Fusion 매크로가 필요하면 전체 ZIP을 사용합니다. Edit 타이틀·효과만 필요하면 별도 FusionMotion.drfx를 설치할 수 있습니다.
+
 ```powershell
 .\install.ps1
 ```

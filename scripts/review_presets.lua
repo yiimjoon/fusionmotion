@@ -49,14 +49,23 @@ for _,file in ipairs(files) do
   local calc=comp:FindTool('SoftnessCalc')
   if calc then
    local function number(name,frame) return comp:FindTool(name):GetOutputList()[1]:GetValue(frame) end
-   print('OUTRO_BLUR',file,'source',number('OutroBlur',220),'calculation',number('SoftnessCalc',220),'effective',follower.SoftnessX1[220])
-   calc.Operator=0
-   print('ADD_OPERATOR_PROBE',file,number('SoftnessCalc',220),follower.SoftnessX1[220])
+   assert(calc.Operator[0]==0,'Softness must add intro and outro')
+   local expected=number('IntroBlur',220)+number('OutroBlur',220)
+   assert(expected>0,'Probe must exercise outro blur')
+   assert(math.abs(number('SoftnessCalc',220)-expected)<0.00001,'Incorrect blur sum')
+   assert(math.abs(follower.SoftnessX1[220]-expected)<0.00001,'X blur lost')
+   assert(math.abs(follower.SoftnessY1[220]-expected)<0.00001,'Y blur lost')
+   print('OUTRO_BLUR_OK',file,expected)
   end
   local poster=comp:FindTool('TimeStretcher1')
   if poster then
-   poster.PosterizeFrames=0
-   print('ZERO_HOLD_PROBE',file,poster.PosterizeFrames[0],tostring(poster.SourceTime[10]))
+   for _,hold in ipairs({0,-1,1,2,12}) do
+    poster.PosterizeFrames=hold
+    local actual=poster.SourceTime[11]
+    local factor=math.max(1,hold)
+    assert(type(actual)=='number' and actual==math.floor(11/factor)*factor,'Invalid hold evaluation: '..hold..' -> '..tostring(actual))
+    print('FRAME_HOLD_OK',file,hold,actual)
+   end
   end
   local text=comp:FindTool('Text1_2')
   if text then print('TYPO_FORMAT',text.Width[0],text.Height[0]);print('TYPO_BASE_ALPHA',follower.Opacity6[0],follower.Opacity6[8],follower.Opacity6[16]) end

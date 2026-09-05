@@ -194,13 +194,14 @@
 							INPID_PreviewControl = "None",
 							INP_Integer = true,
 							INP_Default = 1,
+							INP_MinAllowed = 1,
 							INP_MinScale = 1,
 							INP_MaxScale = 12,
 						},
 					},
 					Inputs = {
 						SourceTime = Input {
-							Expression = "floor(time/TimeStretcher1.PosterizeFrames)*TimeStretcher1.PosterizeFrames",
+							Expression = "floor(time/max(1,TimeStretcher1.PosterizeFrames))*max(1,TimeStretcher1.PosterizeFrames)",
 						},
 						InterpolateBetweenFrames = Input { Value = 0, },
 						Input = Input {
@@ -365,7 +366,7 @@
 							SourceOp = "IntroBlur",
 							Source = "Value",
 						},
-						Operator = Input { Value = 1, },
+						Operator = Input { Value = 0, },
 						SecondOperand = Input {
 							SourceOp = "OutroBlur",
 							Source = "Value",

@@ -1,0 +1,42 @@
+
+DaVinci Resolve Script Interpreter
+Copyright (C) 2005 - 2026 Blackmagic Design Pty. Ltd.
+
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	
+OUTRO_BLUR_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	2.9166666666667	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	0	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	-1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	2	10	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	12	0	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	
+OUTRO_BLUR_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	2.9166666666667	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	0	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	-1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	2	10	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	12	0	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	
+OUTRO_BLUR_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	2.9166666666667	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	0	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	-1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	2	10	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	12	0	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	
+OUTRO_BLUR_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	2.9166666666667	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	0	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	-1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	1	11	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	2	10	
+FRAME_HOLD_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	12	0	
+PORTS_OKpackage/Edit/Effects/Codex Rise Fade Image.setting	7	
+PORTS_OKpackage/Fusion/Macros/Codex/CodexTypo.setting	20	
+TEXT_CONTROL_OKpackage/Fusion/Macros/Codex/CodexTypo.setting	
+TYPO_FORMAT1080	1920	
+TYPO_BASE_ALPHA0	0.875	1	
+REVIEW_COMPLETE_NO_RENDERS
