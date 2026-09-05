@@ -1,55 +1,28 @@
+[CmdletBinding()]
+param([switch]$PackageOnly)
 $ErrorActionPreference = "Stop"
-
-$sourceDir = Join-Path $PSScriptRoot "package\\Edit"
-$targetDir = Join-Path $env:APPDATA "Blackmagic Design\\DaVinci Resolve\\Support\\Fusion\\Templates\\Edit"
-$macroSourceDir = Join-Path $PSScriptRoot "package\\Fusion\\Macros"
-$macroTargetDir = Join-Path $env:APPDATA "Blackmagic Design\\DaVinci Resolve\\Support\\Fusion\\Macros"
+$sourceDir = Join-Path $PSScriptRoot "package/Edit"
+$macroSourceDir = Join-Path $PSScriptRoot "package/Fusion/Macros"
 $distDir = Join-Path $PSScriptRoot "dist"
-$drfx = Join-Path $distDir "Codex-Rise-Fade.drfx"
-$zipPath = Join-Path $distDir "Codex-Rise-Fade.zip"
-
-if (!(Test-Path $sourceDir)) {
-    throw "Preset folder not found: $sourceDir"
+$zipPath = Join-Path $distDir "FusionMotion.zip"
+$drfx = Join-Path $distDir "FusionMotion.drfx"
+foreach ($source in @($sourceDir, $macroSourceDir)) {
+    if (!(Test-Path -LiteralPath $source -PathType Container)) { throw "Missing package folder: $source" }
 }
-
-New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
-New-Item -ItemType Directory -Force -Path $macroTargetDir | Out-Null
-New-Item -ItemType Directory -Force -Path $distDir | Out-Null
-
-$legacyAltTitle = Join-Path $targetDir "Titles\\Codex Rise Fade Pro Alt.setting"
-if (Test-Path $legacyAltTitle) {
-    Remove-Item -LiteralPath $legacyAltTitle -Force
-}
-
-Copy-Item -Path (Join-Path $sourceDir "*") -Destination $targetDir -Recurse -Force
-if (Test-Path $macroSourceDir) {
+if (!$PackageOnly) {
+    $targetDir = Join-Path $env:APPDATA "Blackmagic Design/DaVinci Resolve/Support/Fusion/Templates/Edit"
+    $macroTargetDir = Join-Path $env:APPDATA "Blackmagic Design/DaVinci Resolve/Support/Fusion/Macros"
+    New-Item -ItemType Directory -Force -Path $targetDir, $macroTargetDir | Out-Null
+    Copy-Item -Path (Join-Path $sourceDir "*") -Destination $targetDir -Recurse -Force
     Copy-Item -Path (Join-Path $macroSourceDir "*") -Destination $macroTargetDir -Recurse -Force
+    Write-Host "Installed Edit presets: $targetDir"
+    Write-Host "Installed Fusion macros (including CodexTypo): $macroTargetDir"
 }
-
-if (Test-Path $zipPath) {
-    Remove-Item -LiteralPath $zipPath -Force
+New-Item -ItemType Directory -Force -Path $distDir | Out-Null
+foreach ($artifact in @($zipPath, $drfx)) {
+    if (Test-Path -LiteralPath $artifact) { Remove-Item -LiteralPath $artifact -Force }
 }
-
-if (Test-Path $drfx) {
-    Remove-Item -LiteralPath $drfx -Force
-}
-
-Compress-Archive -Path $sourceDir -DestinationPath $zipPath -Force
+Compress-Archive -LiteralPath $sourceDir -DestinationPath $zipPath -Force
 Rename-Item -LiteralPath $zipPath -NewName (Split-Path $drfx -Leaf)
-
-Write-Host "Installed presets to:"
-Write-Host "  $targetDir\\Titles\\Codex Rise Fade.setting"
-Write-Host "  $targetDir\\Titles\\Codex Rise Fade Pro.setting"
-Write-Host "  $targetDir\\Titles\\Codex Rise Fade Pro Left.setting"
-Write-Host "  $targetDir\\Titles\\Codex Rise Fade Pro Right.setting"
-Write-Host "  $targetDir\\Titles\\Codex Rise Fade Pro Down.setting"
-Write-Host "  $targetDir\\Titles\\Codex Mask Reveal Pro.setting"
-Write-Host "  $targetDir\\Effects\\Codex 3D Arc Image.setting"
-Write-Host "  $targetDir\\Effects\\Codex Rise Fade Image.setting"
-Write-Host "Installed macros to:"
-Write-Host "  $macroTargetDir\\Codex\\Codex Arc Card.setting"
-Write-Host ""
-Write-Host "Created DRFX package:"
-Write-Host "  $drfx"
-Write-Host ""
-Write-Host "Restart DaVinci Resolve or refresh Effects Library to see the presets under Titles and Effects."
+Write-Host "Created Edit-only DRFX: $drfx"
+Write-Host "Fusion macros are installed separately by this script (without -PackageOnly)."

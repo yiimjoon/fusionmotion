@@ -1,196 +1,50 @@
-# Fusion Typography Preset
+# Fusion Motion
 
-DaVinci Resolve Edit 페이지에서 바로 쓸 수 있는 간단한 `rise + fade` 텍스트 타이틀 프리셋입니다.
+DaVinci Resolve용 타이틀·Fusion 매크로와 실제 제작에서 검증한 모션그래픽 작업 지식입니다.
 
-## 포함 파일
+## 포함 패키지
 
-- `package/Edit/Titles/Codex Rise Fade.setting`
-- `package/Edit/Titles/Codex Rise Fade Pro.setting`
-- `package/Edit/Titles/Codex Rise Fade Pro Left.setting`
-- `package/Edit/Titles/Codex Rise Fade Pro Right.setting`
-- `package/Edit/Titles/Codex Rise Fade Pro Down.setting`
-- `package/Edit/Titles/Codex Mask Reveal Pro.setting`
-- `package/Edit/Effects/Codex 3D Arc Image.setting`
-- `package/Edit/Effects/Codex Rise Fade Image.setting`
-- `package/Fusion/Macros/Codex/Codex Arc Card.setting`
-- `install.ps1`
+- Titles: `Codex Rise Fade`, `Codex Rise Fade Pro`, `Codex Rise Fade Pro Left / Right / Down`
+- Effects: **`Codex Rise Fade Image` 유지**
+- Fusion/Macros/Codex: **`CodexTypo`**, `Codex Screen Pixel Overlay`, `gridanim`
 
-## 동작
-
-- 0프레임에서 텍스트가 아래 조건으로 시작합니다.
-- 위쪽에서 올라오며 나타남
-- 불투명도 0에서 100으로 상승
-- 48프레임에 최종 위치와 최종 불투명도에 도달
-- 이후에는 정지 상태 유지
+원본은 `package/Edit/Titles`, `package/Edit/Effects`, `package/Fusion/Macros/Codex`에 있습니다.
 
 ## 설치
 
-PowerShell에서 아래를 실행합니다.
-
 ```powershell
-Set-ExecutionPolicy -Scope Process Bypass
 .\install.ps1
 ```
 
-설치 후 DaVinci Resolve를 재시작하거나 Effects Library를 새로고침하면 `Titles`에 아래 프리셋이 나타납니다.
+Edit 타이틀·효과와 Fusion 매크로를 Resolve 사용자 폴더에 복사하고 `dist/FusionMotion.drfx`를 생성합니다. 로컬 설치 없이 패키지만 만들려면 `./install.ps1 -PackageOnly`를 실행합니다.
 
-- `Codex Rise Fade`
-- `Codex Rise Fade Pro`
-- `Codex Rise Fade Pro Left`
-- `Codex Rise Fade Pro Right`
-- `Codex Rise Fade Pro Down`
-- `Codex Mask Reveal Pro`
+**DRFX는 Edit 타이틀·효과만 포함합니다.** CodexTypo 등 Fusion 매크로는 install.ps1로 설치하거나 `package/Fusion/Macros` 내용을 `%APPDATA%/Blackmagic Design/DaVinci Resolve/Support/Fusion/Macros`로 복사합니다.
 
-또한 `Effects`에는 아래 이미지용 프리셋이 나타납니다.
+라이브러리 새로고침 또는 Resolve 재시작 후 새 인스턴스를 삽입합니다. 파일 교체는 기존 타임라인 인스턴스를 갱신하지 않습니다. 저장소에서 제외한 프리셋의 예전 로컬 설치본은 자동 삭제하지 않습니다.
 
-- `Codex 3D Arc Image`
-- `Codex Rise Fade Image`
+`package/Fusion/Scripts/Comp/Codex Add Screen Pixel Overlay.py`는 필요할 때 Resolve의 `Fusion/Scripts/Comp` 폴더로 수동 복사하는 보조 스크립트입니다.
 
-Fusion 페이지의 `Macro`에는 아래 카드 모션 매크로를 넣을 수 있습니다.
+## CodexTypo
 
-- `Codex Arc Card`
+Typotest의 단어별 리빌을 유지하면서 Inspector 컨트롤을 확장한 **GroupOperator**입니다. 그룹을 확장해 내부 Text+와 Follower를 수정할 수 있습니다.
 
-## 프리셋 차이
+- Text, Font / Style, Size / Position
+- Tracking / Line Spacing, Horizontal / Vertical Alignment
+- Text Color / Alpha
+- Word Stagger / Word Slide / Reveal Opacity
+- Reveal Mask Shape / Width / Height / Softness
 
-### Codex Rise Fade
+기본 폰트는 Pretendard Bold입니다. 없는 환경에서는 사용 가능한 폰트로 바꿉니다. 단어 리빌에는 고정 키프레임이 포함되므로 모든 길이에 자동 대응한다고 가정하지 않습니다.
 
-가장 단순한 버전입니다.
+## Rise Fade 계열
 
-- Text
-- Font
-- Style
-- Size
-- Position
-- Tracking
-- Color
-- Character Stagger
+- 기본 버전은 48프레임 진입을 사용하는 고정형입니다.
+- Pro 네 방향 버전은 속도, 이징, 진입·퇴장 블러, 글자 지연, 모션블러, 프레임 홀드 컨트롤을 제공합니다.
+- Rise Fade Image는 Edit Effects의 이미지/영상 입력에 위치·크기·진입 오프셋을 적용합니다.
 
-### Codex Rise Fade Pro
+## 제작 지식
 
-위에서 등장하는 조절형 버전입니다.
+- [Fusion 제작 규칙과 스크립팅 검증](docs/FUSION_MOTION_KO.md)
+- [기여 및 작업 원칙](AGENTS.md)
 
-- Text
-- Font
-- Style
-- Size
-- Position
-- Tracking
-- Color
-- Animation Speed
-- Ease In
-- Ease Out
-- Intro Blur
-- Outro Blur
-- Character Stagger
-- Motion Blur
-- Quality
-- Shutter Angle
-- Stop Motion Frames
-
-### Codex Rise Fade Pro Left / Right / Down
-
-각 방향에서 등장하는 동일 계열 버전입니다.
-
-- Text
-- Font
-- Style
-- Size
-- Position
-- Tracking
-- Color
-- Animation Speed
-- Ease In
-- Ease Out
-- Intro Blur
-- Outro Blur
-- Character Stagger
-- Motion Blur
-- Quality
-- Shutter Angle
-- Stop Motion Frames
-
-### Codex Mask Reveal Pro
-
-마스크가 닦이듯 지나가면서 블러와 슬라이드가 같이 걸리는 타이포 버전입니다.
-
-- Text
-- Font
-- Style
-- Size
-- Position
-- Tracking
-- Color
-- Animation Speed
-- Ease In
-- Ease Out
-- Direction
-- Travel Distance
-- Intro Blur
-- Reveal Softness
-- Outro Blur
-- Outro Fade Length
-- Character Stagger
-- Whole Text Mode
-- Motion Blur
-- Quality
-- Shutter Angle
-
-### Codex Rise Fade Image
-
-이미지나 영상 클립에 직접 적용하는 버전입니다.
-
-- Position
-- Scale
-- Animation Speed
-- Ease In
-- Ease Out
-- X Offset
-- Y Offset
-
-### Codex 3D Arc Image
-
-2D 이미지/영상 클립을 3D 카드처럼 살짝 회전시키며 arc로 훑는 버전입니다.
-
-- Animation Speed
-- Ease In
-- Ease Out
-- Arc Amount
-- Yaw Amount
-- Camera Distance
-- Height Offset
-- Fade Strength
-- Tilt X
-- Tilt Y
-- Tilt Z
-
-### Codex Arc Card
-
-Fusion Composition 안에서 입력 소스에 연결해 쓰는 카드 arc 매크로입니다.
-
-- Input
-- Animation Speed
-- Ease In
-- Ease Out
-- Arc Amount
-- Yaw Amount
-- Camera Distance
-- Height Offset
-- Fade Strength
-- Tilt X
-- Tilt Y
-- Tilt Z
-
-## 참고
-
-- 기본 `Codex Rise Fade`는 48프레임 기준의 고정형입니다.
-- `Codex Rise Fade Pro`는 속도, 방향, 진입량, 아웃 길이를 직접 조절하는 버전입니다.
-- `Codex Bounce Pop`은 크기 오버슈트와 살짝 뜨는 움직임으로 팝업되는 버전입니다.
-- `Codex Mask Reveal Pro`는 마스크 리빌과 슬라이드 블러를 같이 쓰는 버전입니다.
-- `Codex Rise Fade Image`는 Edit 페이지의 `Effects`에서 이미지/영상 클립에 드래그해서 쓰는 버전입니다.
-- `Codex Light Sweep Image`는 이미지 위로 밝은 스트릭이 한번 지나가는 버전입니다.
-- `Posterize Frames`를 `1`보다 높이면 일부 프레임을 홀드해서 `Posterize Time`처럼 끊기는 움직임을 만들 수 있습니다.
-- `Intro Blur`는 시작할 때 흐렸다가 선명해지는 양입니다.
-- `Outro Blur`는 끝부분에서 다시 흐려지는 양입니다.
-- `Direction`은 `Up / Down / Left / Right` 진입 방향을 고릅니다.
-- `Whole Text Mode`를 켜면 글자별 지연 없이 텍스트 전체가 한 번에 들어옵니다.
-- 글자별 순차 진입을 원하면 `Whole Text Mode`를 끄고 `Character Stagger`를 올리면 됩니다.
+파싱 성공, 호스트 입력·노드 검증, 실제 렌더와 사용자 시각 확인을 구분합니다.
