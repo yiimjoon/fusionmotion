@@ -1,0 +1,30 @@
+
+DaVinci Resolve Script Interpreter
+Copyright (C) 2005 - 2026 Blackmagic Design Pty. Ltd.
+
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro.setting	
+OUTRO_BLURpackage/Edit/Titles/Codex Rise Fade Pro.setting	source	2.9166666666667	calculation	-2.9166666666667	effective	0	
+ADD_OPERATOR_PROBEpackage/Edit/Titles/Codex Rise Fade Pro.setting	2.9166666666667	2.9166666666667	
+ZERO_HOLD_PROBEpackage/Edit/Titles/Codex Rise Fade Pro.setting	0	nil	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	
+OUTRO_BLURpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	source	2.9166666666667	calculation	-2.9166666666667	effective	0	
+ADD_OPERATOR_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	2.9166666666667	2.9166666666667	
+ZERO_HOLD_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Left.setting	0	nil	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	
+OUTRO_BLURpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	source	2.9166666666667	calculation	-2.9166666666667	effective	0	
+ADD_OPERATOR_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	2.9166666666667	2.9166666666667	
+ZERO_HOLD_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Right.setting	0	nil	
+PORTS_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	20	
+TEXT_CONTROL_OKpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	
+OUTRO_BLURpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	source	2.9166666666667	calculation	-2.9166666666667	effective	0	
+ADD_OPERATOR_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	2.9166666666667	2.9166666666667	
+ZERO_HOLD_PROBEpackage/Edit/Titles/Codex Rise Fade Pro Down.setting	0	nil	
+PORTS_OKpackage/Edit/Effects/Codex Rise Fade Image.setting	7	
+PORTS_OKpackage/Fusion/Macros/Codex/CodexTypo.setting	20	
+TEXT_CONTROL_OKpackage/Fusion/Macros/Codex/CodexTypo.setting	
+TYPO_FORMAT1080	1920	
+TYPO_BASE_ALPHA0	0.875	1	
+REVIEW_COMPLETE_NO_RENDERS

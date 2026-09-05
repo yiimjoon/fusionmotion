@@ -76,3 +76,5 @@ mediaOut:ConnectInput('Input', stop)
 - 사용자 확인: 로켓 움직임·달 위치·렉 해소 확인. 배경 overscan은 사용자 수정.
 
 CodexTypo 설치 파일 교체는 기존 인스턴스를 바꾸지 않는다. 새 인스턴스의 Inspector와 내부 Text+를 별도로 확인한다.
+
+매크로를 타임라인에 넣지 않고 검사할 때 `fusion:LoadComp(settingPath, true, true)`로 숨겨진 임시 컴포지션을 만들 수 있었다. 현재 호스트에서 comp:Paste는 문자열/테이블 모두 false를 반환했고 빈 GroupOperator의 LoadSettings는 true를 반환해도 자식 노드를 만들지 않았다. 성공 플래그 대신 실제 노드 수를 검사한다. 검증 후 COMPB_Modified=false로 지정하고 임시 comp를 Close하며 소스 .setting에는 Save하지 않는다.
