@@ -8,6 +8,7 @@ local files={
  'package/Edit/Titles/Codex Rise Fade Pro Right.setting',
  'package/Edit/Titles/Codex Rise Fade Pro Down.setting',
  'package/Edit/Effects/Codex Rise Fade Image.setting',
+ 'package/Edit/Transitions/BQ/BQ Grid Flow.setting',
  'package/Fusion/Macros/Codex/CodexTypo.setting',
 }
 local resolve=assert(bmd.scriptapp('Resolve'),'Resolve is not reachable')
