@@ -1,0 +1,3615 @@
+{
+  "date": "2026-09-08",
+  "method": "read-only Resolve 21.1 MCP; no render or visual validation",
+  "sampleFrame": 303,
+  "nodes": [
+    {
+      "name": "Transform1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.497305314171123,
+          "2": 1.016739,
+          "3": 0
+        },
+        "Size": 0.168,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Right",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Path2",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path2Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Polygon8",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon8Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Background7",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "StopMotion1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.StopMotion",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "Merge6",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "frameRepeat": 2,
+        "frameRepeatVar": 0
+      }
+    },
+    {
+      "name": "Polygon1Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Path6Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Transform1_1_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.497305314171123,
+          "2": 1.016739,
+          "3": 0
+        },
+        "Size": 0.168,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge8",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background3",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform5",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn6",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Polygon4Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Polygon1",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon1Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn14",
+      "type": "MediaIn",
+      "connections": []
+    },
+    {
+      "name": "MosaicBlur1_1_1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn2_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 6.5
+      }
+    },
+    {
+      "name": "Path6",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path6Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform16",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn16",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.359,
+          "3": 0
+        },
+        "Size": 1.63,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.500313335561497,
+          "2": 0.533438746724394,
+          "3": 0
+        },
+        "Size": 0.193,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge19",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon7",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Merge17",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform12",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn8",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform5",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path4",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "MediaIn8",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.268475,
+          "2": 1.0041327189599811,
+          "3": 0
+        },
+        "Size": 0.34,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform11",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "ChromaKeyer1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.32,
+          "3": 0
+        },
+        "Size": 0.678,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MultiMerge1",
+      "type": "MultiMerge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background6",
+          "output": "Output"
+        },
+        {
+          "input": "Layer1.Foreground",
+          "source": "Transform4",
+          "output": "Output"
+        },
+        {
+          "input": "Layer2.Foreground",
+          "source": "Transform4_1",
+          "output": "Output"
+        },
+        {
+          "input": "Layer3.Foreground",
+          "source": "Transform4_2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform1_1_2_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.497305314171123,
+          "2": 1.016739,
+          "3": 0
+        },
+        "Size": 0.168,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Ellipse1_1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Merge28",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon9",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Merge25",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform17",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path4",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path4Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_1_1_1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn2_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "PixelFrequency",
+          "source": "MosaicBlur1_1_1_1PixelFrequency",
+          "output": "Value"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 200
+      }
+    },
+    {
+      "name": "Merge21",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge19",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform15",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background2",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Polygon5_1",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon5_1Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_3",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn3_1",
+          "output": "Output"
+        },
+        {
+          "input": "PixelFrequency",
+          "source": "MosaicBlur1_3PixelFrequency",
+          "output": "Value"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 200
+      }
+    },
+    {
+      "name": "Transform1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.501065340909091,
+          "2": 0.265448437340935,
+          "3": 0
+        },
+        "Size": 0.13,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background2",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Merge2",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn9",
+      "type": "MediaIn",
+      "connections": []
+    },
+    {
+      "name": "MediaIn2",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon3",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Polygon8Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MediaIn3_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon5",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_3",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn17",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn3",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon2",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Merge16",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge15",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1_1_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge25",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon8",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Merge21",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge16_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform3",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform3Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1.343,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Polygon1_1",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon1_1Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn11",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_2",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Merge18Blend",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Merge20",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background7",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform11",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform1_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.501065340909091,
+          "2": 0.265448437340935,
+          "3": 0
+        },
+        "Size": 0.13,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Polygon7",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon7Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Merge3",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge2",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge12",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge4",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform8",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform15",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path9",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "Transform14",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": -1.5190000000000001,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Path2Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Background6",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Merge16_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge15_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1_1_1_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 6.5
+      }
+    },
+    {
+      "name": "ChromaKeyer1_1",
+      "type": "ChromaKeyer",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn18",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform4_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path10",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "MediaIn11_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.626362860892388,
+          "2": 0.494378300884956,
+          "3": 0
+        },
+        "Size": 1.308,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform10",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path5",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "MultiMerge1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 1.403,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge24",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge28",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge23",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "PipeRouter1",
+      "type": "PipeRouter",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn8",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path4Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Polygon2",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon2Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Background10",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Merge6",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge5",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn6",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge5",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge26",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn5",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge26",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge24",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge27",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path1",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "Merge3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.502127659574468,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform14Angle",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "ChromaKeyer1_2",
+      "type": "ChromaKeyer",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn17",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform7",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "PipeRouter2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.468018951732307,
+          "2": -0.132038390301707,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform17",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "ChromaKeyer1_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.62401352874859,
+          "3": 0
+        },
+        "Size": 0.579,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Path1Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MediaIn1_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_3",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "PipeRouter2",
+      "type": "PipeRouter",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn8",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path6_1Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Transform14",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Angle",
+          "source": "Transform14Angle",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform13",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 90
+      }
+    },
+    {
+      "name": "Path7",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path7Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_2",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn1",
+          "output": "Output"
+        },
+        {
+          "input": "PixelFrequency",
+          "source": "MosaicBlur1_2PixelFrequency",
+          "output": "Value"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 200.5
+      }
+    },
+    {
+      "name": "MediaOut1",
+      "type": "MediaOut",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "StopMotion1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge27",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background10",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform16",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn11_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_2",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_2",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Background3",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Path6_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path6_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Background9",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "MediaIn2_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left_3",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn18",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Polygon5_1Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MosaicBlur1_3_1PixelFrequency",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Transform1_1_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_3_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.500313335561497,
+          "2": 0.533438746724394,
+          "3": 0
+        },
+        "Size": 0.193,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Right_3",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Ellipse1_2",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Path10Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MediaIn15",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Path9Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Merge15_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge14_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1_2_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_2PixelFrequency",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Polygon5Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MediaIn1_1_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_3_1",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3_1",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Path8",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path8Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Merge23",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background9",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn15",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Ellipse1_1_1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Merge22",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle2",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Background8",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "DKeyer1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path3Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "DKeyer1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.OFX3DKeyerV2",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "TimeSpeed1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Rectangle1",
+      "type": "RectangleMask",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path6",
+          "output": "Position"
+        }
+      ]
+    },
+    {
+      "name": "Polygon1_1Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Left_2",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Polygon5",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon5Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path3",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path3Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform13",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path8",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "Merge22",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5679999999999998,
+          "2": 0.363444,
+          "3": 0
+        },
+        "Size": 1.732,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MosaicBlur1_1_1_1PixelFrequency",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "MediaIn2_1_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left_3_1",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3_1",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Right_2",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "TimeSpeed1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn14",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 2.03,
+        "Delay": 0
+      }
+    },
+    {
+      "name": "Left",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "MediaIn16",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Background8",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Transform4",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn11",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.537316689944134,
+          "2": 0.560247699115044,
+          "3": 0
+        },
+        "Size": 1.27,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge13",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon4",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Merge12",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform12",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Merge20",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.510555555555556,
+          "2": 0.625627,
+          "3": 0
+        },
+        "Size": 0.939,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Polygon9Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Transform5_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path3",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "PipeRouter1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.265256,
+          "2": 0.5239361702127652,
+          "3": 0
+        },
+        "Size": 0.53,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Polygon7Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Merge9",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Background4",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform6",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path5Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Path8Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Polygon3Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Background4",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Merge17",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge18",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform10",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Path5",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path5Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 6.5
+      }
+    },
+    {
+      "name": "Transform1_2_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.501065340909091,
+          "2": 0.265448437340935,
+          "3": 0
+        },
+        "Size": 0.13,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform9",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Merge9",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.482,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background5_1",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Path10",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path10Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Right_2_1",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Polygon4",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon4Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Left_2_1",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "MediaIn11_1_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_2_1",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_2_1",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Path7Displacement",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Transform1_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MosaicBlur1_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.500313335561497,
+          "2": 0.533438746724394,
+          "3": 0
+        },
+        "Size": 0.193,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MediaIn1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Merge18",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Blend",
+          "source": "Merge18Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Background",
+          "source": "Merge13",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge16",
+          "output": "Output"
+        },
+        {
+          "input": "BlendClone",
+          "source": "Merge18Blend",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Merge14",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background5",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Left_3",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Transform8",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path2",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "Merge11",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 2.224,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Rectangle2",
+      "type": "RectangleMask",
+      "connections": []
+    },
+    {
+      "name": "Rectangle1_1",
+      "type": "RectangleMask",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path6_1",
+          "output": "Position"
+        }
+      ]
+    },
+    {
+      "name": "Merge7",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn9",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Polygon9",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon9Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform4_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path7",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "MediaIn11_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.753,
+          "2": 0.52,
+          "3": 0
+        },
+        "Size": 1.402,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MosaicBlur1_3PixelFrequency",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Path1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Background5",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Right_3_1",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Merge4",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge7",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform3",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background1",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Polygon2Polyline",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Left_3_1",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Merge15",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge14",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_1_2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform6",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "ChromaKeyer1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.513,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.454,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge10",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge8",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform5_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "ChromaKeyer1",
+      "type": "ChromaKeyer",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn10",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn10",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn5",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MosaicBlur1_3_1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.MosaicBlur",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "MediaIn3_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "PixelFrequency",
+          "source": "MosaicBlur1_3_1PixelFrequency",
+          "output": "Value"
+        }
+      ],
+      "sample": {
+        "PixelFrequency": 200
+      }
+    },
+    {
+      "name": "Merge11",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge10",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform7",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge14_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background5_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1_2_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn3_1_1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Polygon5_1",
+          "output": "Mask"
+        },
+        {
+          "input": "LeftAudio",
+          "source": "Left_3_1",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right_3_1",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform3Size",
+      "type": "BezierSpline",
+      "connections": []
+    },
+    {
+      "name": "Polygon3",
+      "type": "PolylineMask",
+      "connections": [
+        {
+          "input": "Polyline",
+          "source": "Polygon3Polyline",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path9",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path9Displacement",
+          "output": "Value"
+        }
+      ]
+    }
+  ],
+  "splineKeys": {
+    "Polygon1Polyline": {
+      "82.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333333
+        }
+      },
+      "83.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "84.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.3333333333333335
+        }
+      },
+      "86.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "87.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        }
+      }
+    },
+    "Path6Displacement": {
+      "114.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.052566709559844334
+        }
+      },
+      "116.0": {
+        "1": 0.157700128679533,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.05256670955984434
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.2256814131634147
+        }
+      },
+      "118.0": {
+        "1": 0.834744368169777,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.2256814131634146
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.028187488301433028
+        }
+      },
+      "119.0": {
+        "1": 0.919306833074076,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.028187488301433028
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.026897722308641292
+        }
+      },
+      "121.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.026897722308641292
+        }
+      }
+    },
+    "Polygon4Polyline": {
+      "90.0": {
+        "1": 0,
+        "RH": {
+          "1": 8.333333333333329,
+          "2": 0.3333333333333333
+        }
+      },
+      "115.0": {
+        "1": 1,
+        "LH": {
+          "1": -8.333333333333329,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 1.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "119.0": {
+        "1": 2,
+        "LH": {
+          "1": -1.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "120.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.3333333333333335
+        }
+      },
+      "122.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.33333333333333304
+        }
+      },
+      "124.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "Polygon8Polyline": {
+      "255.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.6666666666666572,
+          "2": 0.3333333333333333
+        }
+      },
+      "257.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.33333333333333326
+        }
+      },
+      "259.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 1.3333333333333144,
+          "2": 0.3333333333333335
+        }
+      },
+      "263.0": {
+        "1": 3,
+        "LH": {
+          "1": -1.3333333333333144,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 2,
+          "2": 0.3333333333333335
+        }
+      },
+      "269.0": {
+        "1": 4,
+        "LH": {
+          "1": -2,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 1.6666666666666856,
+          "2": 0.33333333333333304
+        }
+      },
+      "274.0": {
+        "1": 5,
+        "LH": {
+          "1": -1.6666666666666856,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 1.3333333333333144,
+          "2": 0.33333333333333304
+        }
+      },
+      "278.0": {
+        "1": 6,
+        "LH": {
+          "1": -1.3333333333333144,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.33333333333333304
+        }
+      },
+      "281.0": {
+        "1": 7,
+        "LH": {
+          "1": -1,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 3,
+          "2": 0.33333333333333304
+        }
+      },
+      "290.0": {
+        "1": 8,
+        "LH": {
+          "1": -3,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.3333333333333339
+        }
+      },
+      "293.0": {
+        "1": 9,
+        "LH": {
+          "1": -1,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 1.3333333333333144,
+          "2": 0.3333333333333339
+        }
+      },
+      "297.0": {
+        "1": 10,
+        "LH": {
+          "1": -1.3333333333333144,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 1.6666666666666856,
+          "2": 0.3333333333333339
+        }
+      },
+      "302.0": {
+        "1": 11,
+        "LH": {
+          "1": -1.6666666666666856,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.3333333333333339
+        }
+      },
+      "304.0": {
+        "1": 12,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 2,
+          "2": 0.3333333333333339
+        }
+      },
+      "310.0": {
+        "1": 13,
+        "LH": {
+          "1": -2,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 1.6666666666666856,
+          "2": 0.3333333333333339
+        }
+      },
+      "315.0": {
+        "1": 14,
+        "LH": {
+          "1": -1.6666666666666856,
+          "2": -0.3333333333333339
+        }
+      }
+    },
+    "Merge18Blend": {
+      "158.0": {
+        "1": 1,
+        "RH": {
+          "1": 0.33333333333300175,
+          "2": 0
+        }
+      },
+      "159.0": {
+        "1": 0,
+        "LH": {
+          "1": -0.33333333333300175,
+          "2": 0
+        }
+      }
+    },
+    "Path2Displacement": {
+      "66.0": {
+        "1": 0,
+        "RH": {
+          "1": 17.099999999999994,
+          "2": 0.04
+        }
+      },
+      "97.0": {
+        "1": 1,
+        "LH": {
+          "1": -16.200000000000003,
+          "2": -0.06500000000000095
+        }
+      }
+    },
+    "Path4Displacement": {
+      "78.0": {
+        "1": 0,
+        "RH": {
+          "1": 7.666666666666671,
+          "2": 0.3333333333333333
+        }
+      },
+      "101.0": {
+        "1": 1,
+        "LH": {
+          "1": -7.666666666666671,
+          "2": -0.33333333333333337
+        }
+      }
+    },
+    "Transform14Angle": {
+      "139.0": {
+        "1": 0,
+        "RH": {
+          "1": 20.333333333333343,
+          "2": 30
+        }
+      },
+      "200.0": {
+        "1": 90,
+        "LH": {
+          "1": -20.333333333333343,
+          "2": -30
+        }
+      }
+    },
+    "Path1Displacement": {
+      "0.0": {
+        "1": 0,
+        "RH": {
+          "1": 4.65575527348724,
+          "2": 1.00835039043867
+        }
+      },
+      "24.0": {
+        "1": 1,
+        "LH": {
+          "1": -7.999991999999999,
+          "2": 0
+        }
+      }
+    },
+    "Path6_1Displacement": {
+      "114.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.052566709559844334
+        }
+      },
+      "116.0": {
+        "1": 0.157700128679533,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.05256670955984434
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.2256814131634147
+        }
+      },
+      "118.0": {
+        "1": 0.834744368169777,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.2256814131634146
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.028187488301433028
+        }
+      },
+      "119.0": {
+        "1": 0.919306833074076,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.028187488301433028
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.026897722308641292
+        }
+      },
+      "121.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.026897722308641292
+        }
+      }
+    },
+    "Polygon5_1Polyline": {
+      "117.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333333
+        }
+      },
+      "118.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "119.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "120.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "121.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "122.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "123.0": {
+        "1": 6,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.33333333333333304
+        }
+      },
+      "125.0": {
+        "1": 7,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "MosaicBlur1_3_1PixelFrequency": {
+      "127.0": {
+        "1": 6.5,
+        "RH": {
+          "1": 4.993333333332998,
+          "2": 1.41891862633811
+        }
+      },
+      "134.0": {
+        "1": 200,
+        "LH": {
+          "1": -1.3090323358339901,
+          "2": -145.9393857266926
+        },
+        "RH": {
+          "1": 47,
+          "2": 0
+        }
+      },
+      "275.0": {
+        "1": 200,
+        "LH": {
+          "1": -47,
+          "2": 0
+        }
+      }
+    },
+    "Path10Displacement": {
+      "110.0": {
+        "1": 0,
+        "RH": {
+          "1": 1.6666666666666714,
+          "2": 0.3333333333333333
+        }
+      },
+      "115.0": {
+        "1": 1,
+        "LH": {
+          "1": -1.6666666666666714,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 56.33333333333334,
+          "2": 0
+        }
+      },
+      "284.0": {
+        "1": 1,
+        "LH": {
+          "1": -56.333333333333314,
+          "2": 0
+        }
+      }
+    },
+    "Path9Displacement": {
+      "197.0": {
+        "1": 0,
+        "RH": {
+          "1": 31.733333333333007,
+          "2": -0.00405797011710565
+        }
+      },
+      "225.0": {
+        "1": 1,
+        "LH": {
+          "1": -7.599999999999994,
+          "2": -0.11000000000000099
+        }
+      }
+    },
+    "MosaicBlur1_2PixelFrequency": {
+      "0.0": {
+        "1": 6.5,
+        "RH": {
+          "1": 6.666666666666667,
+          "2": 0.16666666666664653
+        }
+      },
+      "20.0": {
+        "1": 6.99999999999994,
+        "LH": {
+          "1": -6.666666666666666,
+          "2": -0.16666666666664653
+        },
+        "RH": {
+          "1": 14.399999999999999,
+          "2": -3.9999999999999396
+        }
+      },
+      "53.0": {
+        "1": 200.5,
+        "LH": {
+          "1": -10.999989,
+          "2": 0
+        }
+      }
+    },
+    "Polygon5Polyline": {
+      "117.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333333
+        }
+      },
+      "118.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "119.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "120.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "121.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "122.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "123.0": {
+        "1": 6,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.33333333333333304
+        }
+      },
+      "125.0": {
+        "1": 7,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "Path3Displacement": {
+      "68.0": {
+        "1": 0,
+        "RH": {
+          "1": 8.666666666666671,
+          "2": 0.3333333333333333
+        }
+      },
+      "94.0": {
+        "1": 1,
+        "LH": {
+          "1": -8.666666666666671,
+          "2": -0.33333333333333337
+        }
+      }
+    },
+    "Polygon1_1Polyline": {
+      "82.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333333
+        }
+      },
+      "83.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "84.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "85.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "86.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "87.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 10.333333333333329,
+          "2": 0.33333333333333304
+        }
+      },
+      "118.0": {
+        "1": 6,
+        "LH": {
+          "1": -10.333333333333329,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "MosaicBlur1_1_1_1PixelFrequency": {
+      "270.0": {
+        "1": 6.5,
+        "RH": {
+          "1": 8,
+          "2": 1.5
+        }
+      },
+      "284.0": {
+        "1": 200,
+        "LH": {
+          "1": 0,
+          "2": -106.5000000000232
+        }
+      }
+    },
+    "Polygon9Polyline": {
+      "247.0": {
+        "1": 0,
+        "RH": {
+          "1": 16.333333333333314,
+          "2": 0.3333333333333333
+        }
+      },
+      "296.0": {
+        "1": 1,
+        "LH": {
+          "1": -16.333333333333314,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.33333333333333326
+        }
+      },
+      "298.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.3333333333333335
+        }
+      },
+      "300.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.3333333333333335
+        }
+      },
+      "303.0": {
+        "1": 4,
+        "LH": {
+          "1": -1,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.33333333333333304
+        }
+      },
+      "305.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 1.6666666666666856,
+          "2": 0.33333333333333304
+        }
+      },
+      "310.0": {
+        "1": 6,
+        "LH": {
+          "1": -1.6666666666666856,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.33333333333333304
+        }
+      },
+      "313.0": {
+        "1": 7,
+        "LH": {
+          "1": -1,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "Polygon7Polyline": {
+      "222.0": {
+        "1": 0,
+        "RH": {
+          "1": 4.666666666666657,
+          "2": 0.3333333333333333
+        }
+      },
+      "236.0": {
+        "1": 1,
+        "LH": {
+          "1": -4.666666666666657,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.33333333333333326
+        }
+      },
+      "239.0": {
+        "1": 2,
+        "LH": {
+          "1": -1,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 1.6666666666666572,
+          "2": 0.3333333333333335
+        }
+      },
+      "244.0": {
+        "1": 3,
+        "LH": {
+          "1": -1.6666666666666572,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666572,
+          "2": 0.3333333333333335
+        }
+      },
+      "246.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.6666666666666572,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.33333333333333304
+        }
+      },
+      "247.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.6666666666666572,
+          "2": 0.33333333333333304
+        }
+      },
+      "249.0": {
+        "1": 6,
+        "LH": {
+          "1": -0.6666666666666572,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.33333333333333304
+        }
+      },
+      "250.0": {
+        "1": 7,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.33333333333333304
+        }
+      },
+      "251.0": {
+        "1": 8,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.3333333333333339
+        }
+      },
+      "252.0": {
+        "1": 9,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.3333333333333339
+        }
+      },
+      "253.0": {
+        "1": 10,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 0.3333333333333428,
+          "2": 0.3333333333333339
+        }
+      },
+      "254.0": {
+        "1": 11,
+        "LH": {
+          "1": -0.3333333333333428,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.3333333333333339
+        }
+      },
+      "257.0": {
+        "1": 12,
+        "LH": {
+          "1": -1,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.3333333333333339
+        }
+      },
+      "259.0": {
+        "1": 13,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 0.6666666666666856,
+          "2": 0.3333333333333339
+        }
+      },
+      "261.0": {
+        "1": 14,
+        "LH": {
+          "1": -0.6666666666666856,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.3333333333333339
+        }
+      },
+      "264.0": {
+        "1": 15,
+        "LH": {
+          "1": -1,
+          "2": -0.3333333333333339
+        },
+        "RH": {
+          "1": 3,
+          "2": 0.3333333333333339
+        }
+      },
+      "273.0": {
+        "1": 16,
+        "LH": {
+          "1": -3,
+          "2": -0.3333333333333339
+        }
+      }
+    },
+    "Path5Displacement": {
+      "108.0": {
+        "1": 0,
+        "RH": {
+          "1": 9,
+          "2": 0
+        }
+      },
+      "126.0": {
+        "1": 1,
+        "LH": {
+          "1": -9.599999999999994,
+          "2": -0.004000000000001003
+        }
+      }
+    },
+    "Path8Displacement": {
+      "133.0": {
+        "1": 0,
+        "RH": {
+          "1": 0,
+          "2": 0.144252883169343
+        }
+      },
+      "158.0": {
+        "1": 1,
+        "LH": {
+          "1": -12.394444444443991,
+          "2": -0.009688055744059954
+        }
+      }
+    },
+    "Polygon3Polyline": {
+      "79.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.3333333333333333
+        }
+      },
+      "81.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "82.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.3333333333333335
+        }
+      },
+      "84.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "85.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 1,
+          "2": 0.33333333333333304
+        }
+      },
+      "88.0": {
+        "1": 5,
+        "LH": {
+          "1": -1,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "Path7Displacement": {
+      "125.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.6666666666666714,
+          "2": 0.3333333333333333
+        }
+      },
+      "127.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.6666666666666714,
+          "2": -0.33333333333333337
+        }
+      }
+    },
+    "MosaicBlur1_3PixelFrequency": {
+      "127.0": {
+        "1": 6.5,
+        "RH": {
+          "1": 4.993333333332998,
+          "2": 1.41891862633811
+        }
+      },
+      "134.0": {
+        "1": 200,
+        "LH": {
+          "1": -1.3090323358339901,
+          "2": -145.9393857266926
+        }
+      }
+    },
+    "Polygon2Polyline": {
+      "80.0": {
+        "1": 0,
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333333
+        }
+      },
+      "81.0": {
+        "1": 1,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333337
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333326
+        }
+      },
+      "82.0": {
+        "1": 2,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "83.0": {
+        "1": 3,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.3333333333333335
+        }
+      },
+      "84.0": {
+        "1": 4,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.3333333333333335
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "85.0": {
+        "1": 5,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "86.0": {
+        "1": 6,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "87.0": {
+        "1": 7,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        },
+        "RH": {
+          "1": 0.3333333333333286,
+          "2": 0.33333333333333304
+        }
+      },
+      "88.0": {
+        "1": 8,
+        "LH": {
+          "1": -0.3333333333333286,
+          "2": -0.33333333333333304
+        }
+      }
+    },
+    "Transform3Size": {
+      "21.0": {
+        "1": 1,
+        "RH": {
+          "1": 8.157800552330901,
+          "2": 0.23911908628047995
+        }
+      },
+      "53.0": {
+        "1": 1.343,
+        "LH": {
+          "1": -10.666656000000003,
+          "2": 0
+        }
+      }
+    }
+  }
+}

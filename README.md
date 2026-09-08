@@ -58,6 +58,7 @@ Typotest의 단어별 리빌을 유지하면서 Inspector 컨트롤을 확장한
 
 ## 제작 지식
 
+- [BQ 스타일 분석과 다음 영상 제작 플레이북](docs/BQ_STYLE_PLAYBOOK_KO.md) — 2026-09-08 라이브 그래프의 연결·키프레임 근거와 재사용 절차
 - [Fusion 제작 규칙과 스크립팅 검증](docs/FUSION_MOTION_KO.md)
 - [6개 프리셋 코드 리뷰와 확인된 결함](docs/PRESET_REVIEW_KO.md)
 - [기여 및 작업 원칙](AGENTS.md)
