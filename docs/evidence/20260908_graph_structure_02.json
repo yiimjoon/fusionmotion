@@ -1,0 +1,5353 @@
+{
+  "method": "Read-only Resolve 21.1; expressions excluded from style evidence by user request; no render",
+  "sampleFrame": 63,
+  "nodes": [
+    {
+      "name": "Right",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Transform6_1_1_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6_1_1_2Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3_1_1_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background3TopLeftAlpha",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 1,
+          "RH": {
+            "1": 9,
+            "2": 0
+          }
+        },
+        "347.0": {
+          "1": 1,
+          "LH": {
+            "1": -9,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform14Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 1,
+          "RH": {
+            "1": 23.666666666666668,
+            "2": 0.016000000000000014
+          }
+        },
+        "71.0": {
+          "1": 1.048,
+          "LH": {
+            "1": -23.666666666666664,
+            "2": -0.016000000000000014
+          }
+        }
+      }
+    },
+    {
+      "name": "BQColorRevealText_2_3",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4_3",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4_3Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4_3",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4_3",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4_3Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4_3Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4_3Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4_3",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4_3",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform7_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.975566411996033,
+          "2": 0.594762556829986,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "StopMotion1",
+      "type": "ofx.com.blackmagicdesign.resolvefx.StopMotion",
+      "connections": [
+        {
+          "input": "Source",
+          "source": "Merge12",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "frameRepeat": 2,
+        "frameRepeatVar": 0
+      }
+    },
+    {
+      "name": "Background3_1_1TopLeftRed",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333333333333314,
+            "2": 0.3333333333333333
+          }
+        },
+        "336.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333333333333314,
+            "2": -0.33333333333333337
+          }
+        }
+      }
+    },
+    {
+      "name": "Merge8",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle4",
+          "output": "Mask"
+        },
+        {
+          "input": "Background",
+          "source": "Merge6_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn6",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Merge15",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_3",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed2_3",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 125.1
+      }
+    },
+    {
+      "name": "Transform16",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform16Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform15",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": -0.047,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background3_1TopLeftAlpha",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "314.0": {
+          "1": 1,
+          "RH": {
+            "1": 6.666666666666686,
+            "2": 0
+          }
+        },
+        "334.0": {
+          "1": 1,
+          "LH": {
+            "1": -6.666666666666686,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "MediaIn8",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform5",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Angle",
+          "source": "Transform5Angle",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform14",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.761,
+        "Angle": 90
+      }
+    },
+    {
+      "name": "Transform6_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6_1Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform3_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.320729300315228,
+          "2": -0.188361454324152,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1.543,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TypotestPreset",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform8_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": -0.2393137,
+          "2": -0.6525316,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 3.871,
+        "Angle": -90
+      }
+    },
+    {
+      "name": "Transform11",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn6",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1.558,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MultiMerge1",
+      "type": "MultiMerge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge4",
+          "output": "Output"
+        },
+        {
+          "input": "Layer1.Foreground",
+          "source": "Transform3",
+          "output": "Output"
+        },
+        {
+          "input": "Layer1.Blend",
+          "source": "MultiMerge1Text1LayerLayer1Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Layer2.Foreground",
+          "source": "Transform6",
+          "output": "Output"
+        },
+        {
+          "input": "Layer3.Foreground",
+          "source": "Transform7_1",
+          "output": "Output"
+        },
+        {
+          "input": "Layer4.Foreground",
+          "source": "PipeRouter1",
+          "output": "Output"
+        },
+        {
+          "input": "Layer5.Foreground",
+          "source": "Transform7_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Layer6.Foreground",
+          "source": "Transform7_1_2",
+          "output": "Output"
+        },
+        {
+          "input": "Layer7.Foreground",
+          "source": "Transform7_1_3",
+          "output": "Output"
+        },
+        {
+          "input": "Layer8.Foreground",
+          "source": "Transform8",
+          "output": "Output"
+        },
+        {
+          "input": "Layer8.Blend",
+          "source": "MultiMerge1Text1_2LayerLayer8Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Layer9.Foreground",
+          "source": "Transform8_1",
+          "output": "Output"
+        },
+        {
+          "input": "Layer9.Blend",
+          "source": "MultiMerge1Transform8_1LayerLayer9Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Layer10.Foreground",
+          "source": "Transform3_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge7_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge7",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge17",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform6_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6_1_1Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform6_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6_1_1_1Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TimeSpeed2_5",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 187.8
+      }
+    },
+    {
+      "name": "Ellipse1_1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Transform6_1_1Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 22.1818181818182,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -22.1818181818182,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform9_1_1_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_1_1_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.868939678656021,
+          "2": -0.914651268490091,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge10",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "ColorCorrector1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge3",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background3_1_1TopLeftBlue",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333333333333314,
+            "2": 0
+          }
+        },
+        "336.0": {
+          "1": 0,
+          "LH": {
+            "1": -5.333333333333314,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "TimeSpeed2_1_1_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_1_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 209.8
+      }
+    },
+    {
+      "name": "Merge1_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge2_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Paint1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform1",
+      "type": "Transform",
+      "connections": [],
+      "sample": {
+        "Center": {
+          "1": 0.462,
+          "2": 0.597,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1.63,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Text1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle1",
+          "output": "Mask"
+        },
+        {
+          "input": "PositionOnPath",
+          "source": "Text1Positiononpath",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MultiMerge2",
+      "type": "MultiMerge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge5",
+          "output": "Output"
+        },
+        {
+          "input": "Layer1.Foreground",
+          "source": "Transform13",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge2",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform18",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge10",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background3TopLeftGreen",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.6666666666666856,
+            "2": 0.231372549019608
+          }
+        },
+        "322.0": {
+          "1": 0.694117647058824,
+          "LH": {
+            "1": -0.6666666666666856,
+            "2": -0.23137254901960796
+          },
+          "RH": {
+            "1": 8.333333333333314,
+            "2": -3.3306690738754696e-16
+          }
+        },
+        "347.0": {
+          "1": 0.694117647058823,
+          "LH": {
+            "1": -8.333333333333314,
+            "2": 3.3306690738754696e-16
+          },
+          "RH": {
+            "1": 3.3333333333333144,
+            "2": -0.2313725490196077
+          }
+        },
+        "357.0": {
+          "1": 0,
+          "LH": {
+            "1": -3.3333333333333144,
+            "2": 0.23137254901960763
+          }
+        }
+      }
+    },
+    {
+      "name": "ColorCorrector1",
+      "type": "ColorCorrector",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform11",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn9",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn7",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn2",
+      "type": "MediaIn",
+      "connections": []
+    },
+    {
+      "name": "Paint1",
+      "type": "Paint",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Background2_1",
+          "output": "Output"
+        },
+        {
+          "input": "Paint",
+          "source": "PolylineStroke1",
+          "output": "Out"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn3",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_1_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_1_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.7746243883489,
+          "2": -0.605424171808696,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background3_1_1TopLeftGreen",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333333333333314,
+            "2": 0
+          }
+        },
+        "336.0": {
+          "1": 0,
+          "LH": {
+            "1": -5.333333333333314,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "TimeSpeed3",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_2_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1.42,
+        "Delay": 15.6
+      }
+    },
+    {
+      "name": "Transform3",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.320729300315228,
+          "2": -0.188361454324152,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1.543,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background1_1",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "TypotestPreset_1_1_1_1_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_1_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_1_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_1_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_1_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_1_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1_1_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_1_1_1_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_1_1_1_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_1_1_1_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_1_1_1_1_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_1_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_1_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Text1_3Blue1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "347.0": {
+          "1": 0.00392156862745098,
+          "RH": {
+            "1": 3.6666666666666856,
+            "2": -0.0013071895424836598
+          }
+        },
+        "358.0": {
+          "1": 0,
+          "LH": {
+            "1": -3.6666666666666856,
+            "2": 0.0013071895424836603
+          }
+        }
+      }
+    },
+    {
+      "name": "Background3",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1",
+          "output": "Mask"
+        },
+        {
+          "input": "TopLeftRed",
+          "source": "Background3TopLeftRed",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftGreen",
+          "source": "Background3TopLeftGreen",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftBlue",
+          "source": "Background3TopLeftBlue",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftAlpha",
+          "source": "Background3TopLeftAlpha",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Merge5",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "MultiMerge1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge13",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform15",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Center",
+          "source": "Path1",
+          "output": "Position"
+        },
+        {
+          "input": "Input",
+          "source": "Transform10",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform6Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 12,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -12,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform6_1_1_3",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6_1_1_3Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3_1_1_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0,
+          "2": 0,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TypotestPreset_3",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_5Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_5",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_5Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_3",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_5",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_5",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_5Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_5",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_5Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_5Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_5",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_5Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_5Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_5Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_5",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_3",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_5",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Background3_1",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "TopLeftRed",
+          "source": "Background3_1TopLeftRed",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftGreen",
+          "source": "Background3_1TopLeftGreen",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftBlue",
+          "source": "Background3_1TopLeftBlue",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftAlpha",
+          "source": "Background3_1TopLeftAlpha",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed2",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 100.1
+      }
+    },
+    {
+      "name": "TypotestPreset_2",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_3Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_3",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_3Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_2",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_3",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_3",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_3Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_3",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_3Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_3Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_3",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_3Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_3Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_3Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_3",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_2",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_3",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "MultiMerge1Text1_2LayerLayer8Blend",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "75.0": {
+          "1": 1,
+          "RH": {
+            "1": 19.5151515151515,
+            "2": 0
+          }
+        },
+        "98.0": {
+          "1": 0,
+          "LH": {
+            "1": -19.5151515151515,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "PolylineStroke1End",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "22.0": {
+          "1": 0,
+          "RH": {
+            "1": 19.0909090909091,
+            "2": 0
+          }
+        },
+        "49.0": {
+          "1": 1,
+          "LH": {
+            "1": -19.0909090909091,
+            "2": 0
+          },
+          "RH": {
+            "1": 8.666666666666664,
+            "2": 0
+          }
+        },
+        "75.0": {
+          "1": 1,
+          "LH": {
+            "1": -8.666666666666671,
+            "2": 0
+          },
+          "RH": {
+            "1": 9.998999834060697,
+            "2": 0
+          }
+        },
+        "93.0": {
+          "1": 0,
+          "LH": {
+            "1": -10,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform10",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform10Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform5",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.542,
+          "2": 0.829,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform7",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 1.04688620901503,
+          "2": 0.940830455955642,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "ChromaKeyer1",
+      "type": "ChromaKeyer",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn9",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed2_1_1_1_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_1_1_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 229.7
+      }
+    },
+    {
+      "name": "MultiMerge1Text1LayerLayer1Blend",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "74.0": {
+          "1": 1
+        }
+      }
+    },
+    {
+      "name": "Transform9_1_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.122125,
+          "2": 0.444087,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform18Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "318.0": {
+          "1": 1,
+          "RH": {
+            "1": 24.421568627450995,
+            "2": 0
+          }
+        },
+        "365.0": {
+          "1": 1.483,
+          "LH": {
+            "1": -24.421568627450995,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1Positiononpath",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0.5,
+          "RH": {
+            "1": 35.6,
+            "2": 0.030000000000000027
+          }
+        },
+        "71.0": {
+          "1": 1.5,
+          "LH": {
+            "1": -62.48624861532928,
+            "2": 0.010773491140569913
+          },
+          "RH": {
+            "1": 93,
+            "2": -0.609310344827586
+          }
+        },
+        "350.0": {
+          "1": -0.4,
+          "LH": {
+            "1": -91.5,
+            "2": 0.45
+          }
+        }
+      }
+    },
+    {
+      "name": "Background3TopLeftRed",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.6666666666666856,
+            "2": 0.040522875816993334
+          }
+        },
+        "322.0": {
+          "1": 0.12156862745098,
+          "LH": {
+            "1": -0.6666666666666856,
+            "2": -0.040522875816993334
+          },
+          "RH": {
+            "1": 8.333333333333314,
+            "2": 0
+          }
+        },
+        "347.0": {
+          "1": 0.12156862745098,
+          "LH": {
+            "1": -8.333333333333314,
+            "2": 0
+          },
+          "RH": {
+            "1": 3.3333333333333144,
+            "2": 0.29281045751634
+          }
+        },
+        "357.0": {
+          "1": 1,
+          "LH": {
+            "1": -3.3333333333333144,
+            "2": -0.29281045751634005
+          }
+        }
+      }
+    },
+    {
+      "name": "PolylineStroke1Start",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "22.0": {
+          "1": 0,
+          "RH": {
+            "1": 15.333333333333336,
+            "2": 0
+          }
+        },
+        "68.0": {
+          "1": 0,
+          "LH": {
+            "1": -15.333333333333329,
+            "2": 0
+          },
+          "RH": {
+            "1": 13.887499769528702,
+            "2": 0
+          }
+        },
+        "93.0": {
+          "1": 0,
+          "LH": {
+            "1": -13.8888888888889,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Merge9",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.542,
+          "2": 0.7982,
+          "3": 0
+        },
+        "Size": 0.252,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "BQColorRevealText_2_2",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4_2",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4_2Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4_2",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4_2",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4_2Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_2",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4_2Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_2Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4_2Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4_2",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4_2",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "BQColorRevealText_2_3_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4_3_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4_3_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4_3_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4_3_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4_3_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4_3_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4_3_1Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4_3_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4_3_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "BQColorRevealText_2_3_1_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4_3_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4_3_1_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4_3_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4_3_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4_3_1_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4_3_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_3_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4_3_1_1Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4_3_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4_3_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform6_1Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 22.1818181818182,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -22.1818181818182,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "BQColorRevealText_2_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4_1Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform6_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 12
+      }
+    },
+    {
+      "name": "BQColorRevealText_2",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_4",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_4Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_4",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_4",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_4Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_4Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_4Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_4Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_4",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_4",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.842138038752563,
+          "2": 0.444087,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform9_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.86945790449203,
+          "2": 0.0968363706727766,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TypotestPreset_1_1_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_1_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_1_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_1_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_1_1_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "TypotestPreset_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform6_1_1_3Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 22.1818181818182,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -22.1818181818182,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "TypotestPreset_1_1_1_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_1_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_1_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1_1_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_1_1_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_1_1_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_1_1_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_1_1_1_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Rectangle4",
+      "type": "RectangleMask",
+      "connections": []
+    },
+    {
+      "name": "Transform6_1_1_2Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 22.1818181818182,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -22.1818181818182,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "TypotestPreset_1_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input7",
+          "source": "Follower2_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "Input8",
+          "source": "Path1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Instance_Text1_1_1_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "Delay",
+          "source": "Follower2_1_1_1Delay",
+          "output": "Value"
+        },
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_1_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity6",
+          "source": "Follower2_1_1_1Opacity6",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_1_1Delay",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "20.0": {
+          "1": 1.66,
+          "RH": {
+            "1": 2.333333333333332,
+            "2": 0.06666666666666665
+          }
+        },
+        "27.0": {
+          "1": 1.86,
+          "LH": {
+            "1": -2.333333333333332,
+            "2": -0.06666666666666665
+          },
+          "RH": {
+            "1": 4.666666666666668,
+            "2": -0.3533333333333333
+          }
+        },
+        "41.0": {
+          "1": 0.8,
+          "LH": {
+            "1": -4.666666666666664,
+            "2": 0.3533333333333333
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1_1_1_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_1_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_1_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_1_1Opacity6",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_1_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Instance_Text1_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_1_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Text1_3Red1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "347.0": {
+          "1": 0.105882352941176,
+          "RH": {
+            "1": 3.6666666666666856,
+            "2": 0.29803921568627467
+          }
+        },
+        "358.0": {
+          "1": 1,
+          "LH": {
+            "1": -3.6666666666666856,
+            "2": -0.29803921568627467
+          }
+        }
+      }
+    },
+    {
+      "name": "BQColorRevealText",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_2",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_2Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_2",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_2",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_2Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_2",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_2Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_2Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_2Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_2",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_2",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "BQColorRevealText_1",
+      "type": "MacroOperator",
+      "connections": [
+        {
+          "input": "Input8",
+          "source": "Path1_1_2_1",
+          "output": "Position"
+        },
+        {
+          "input": "Input9",
+          "source": "Follower2_1_2_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Follower2_1_2_1",
+      "type": "StyledTextFollower",
+      "connections": [
+        {
+          "input": "WordOffset",
+          "source": "Path1_1_2_1",
+          "output": "Position"
+        },
+        {
+          "input": "Opacity1",
+          "source": "Follower2_1_2_1Opacity1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_2_1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1_1_2_1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Path1_1_2_1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Follower2_1_2_1Opacity1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 5.333328,
+            "2": 1
+          }
+        },
+        "16.0": {
+          "1": 1,
+          "LH": {
+            "1": -5.333328,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_2_2_1",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "StyledText",
+          "source": "Follower2_1_2_1",
+          "output": "StyledText"
+        }
+      ]
+    },
+    {
+      "name": "Transform14",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform14Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.358,
+          "3": 0
+        },
+        "Size": 1.0425915492957747,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform6_1_1_1Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0,
+          "RH": {
+            "1": 22.1818181818182,
+            "2": 0
+          }
+        },
+        "36.0": {
+          "1": 0.2,
+          "LH": {
+            "1": -22.1818181818182,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "TimeSpeed2_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 125.1
+      }
+    },
+    {
+      "name": "TimeSpeed1_1_2",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform6_1_1_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 36
+      }
+    },
+    {
+      "name": "MediaOut1",
+      "type": "MediaOut",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "StopMotion1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge12",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge11",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn7",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform7_1_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed1_1_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.773300533532101,
+          "2": -0.104066586896496,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background3_1_1",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "TopLeftRed",
+          "source": "Background3_1_1TopLeftRed",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftGreen",
+          "source": "Background3_1_1TopLeftGreen",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftBlue",
+          "source": "Background3_1_1TopLeftBlue",
+          "output": "Value"
+        },
+        {
+          "input": "TopLeftAlpha",
+          "source": "Background3_1_1TopLeftAlpha",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed2_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 152.3
+      }
+    },
+    {
+      "name": "Merge11",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge2",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn8",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background3_1_1TopLeftAlpha",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 1
+        }
+      }
+    },
+    {
+      "name": "Merge3",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background2",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "MediaIn2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background2",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Ellipse1_1_1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Transform18",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform18Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Transform17",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.97,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform17",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform16",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform16Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "264.0": {
+          "1": 1,
+          "RH": {
+            "1": 36.238927738928,
+            "2": 0
+          }
+        },
+        "323.0": {
+          "1": 0.663,
+          "LH": {
+            "1": -36.238927738928,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Rectangle1",
+      "type": "RectangleMask",
+      "connections": [
+        {
+          "input": "Height",
+          "source": "Rectangle1Height",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform5Angle",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "68.0": {
+          "1": 90,
+          "RH": {
+            "1": 40.2,
+            "2": -10
+          }
+        },
+        "114.0": {
+          "1": 0,
+          "LH": {
+            "1": -36.9672727272727,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Path1Displacement",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "123.0": {
+          "1": 0,
+          "RH": {
+            "1": 150.20701754386,
+            "2": 0
+          }
+        },
+        "301.0": {
+          "1": 1,
+          "LH": {
+            "1": -150,
+            "2": -0.16000000000000003
+          }
+        }
+      }
+    },
+    {
+      "name": "Background3_1_1_1",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1_1_1",
+          "output": "Mask"
+        }
+      ]
+    },
+    {
+      "name": "Path1",
+      "type": "PolyPath",
+      "connections": [
+        {
+          "input": "Displacement",
+          "source": "Path1Displacement",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed1_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform6_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 30
+      }
+    },
+    {
+      "name": "Transform10Size",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "68.0": {
+          "1": 1,
+          "RH": {
+            "1": 37,
+            "2": 0.003344481605350058
+          }
+        },
+        "121.0": {
+          "1": 2.08,
+          "LH": {
+            "1": -40.400000000000006,
+            "2": 0.01030100334447992
+          }
+        }
+      }
+    },
+    {
+      "name": "Background3TopLeftBlue",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "320.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.6666666666666856,
+            "2": 0.015686274509803932
+          }
+        },
+        "322.0": {
+          "1": 0.0470588235294118,
+          "LH": {
+            "1": -0.6666666666666856,
+            "2": -0.015686274509803935
+          },
+          "RH": {
+            "1": 8.333333333333314,
+            "2": 0
+          }
+        },
+        "347.0": {
+          "1": 0.0470588235294118,
+          "LH": {
+            "1": -8.333333333333314,
+            "2": 0
+          },
+          "RH": {
+            "1": 3.3333333333333144,
+            "2": -0.01568627450980393
+          }
+        },
+        "357.0": {
+          "1": 0,
+          "LH": {
+            "1": -3.3333333333333144,
+            "2": 0.015686274509803935
+          }
+        }
+      }
+    },
+    {
+      "name": "TimeSpeed2_5_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4_3_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 209.8
+      }
+    },
+    {
+      "name": "Merge18",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9_1_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_4_1_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Left",
+      "type": "AudioDisplay",
+      "connections": []
+    },
+    {
+      "name": "Transform9_4_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_5_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.0613337649679271,
+          "2": -0.921562710277827,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TimeSpeed2_5_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4_3_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 229.7
+      }
+    },
+    {
+      "name": "Transform4",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "MediaIn3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.399,
+          "2": -2.915939,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.975,
+        "Angle": -90
+      }
+    },
+    {
+      "name": "Merge13",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background3_1TopLeftBlue",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "314.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.3333333333333144,
+            "2": 0.011764705882352934
+          }
+        },
+        "315.0": {
+          "1": 0.0352941176470588,
+          "LH": {
+            "1": -0.3333333333333144,
+            "2": -0.011764705882352934
+          },
+          "RH": {
+            "1": 6.333333333333314,
+            "2": 0
+          }
+        },
+        "334.0": {
+          "1": 0.0352941176470588,
+          "LH": {
+            "1": -6.333333333333314,
+            "2": 0
+          },
+          "RH": {
+            "1": 4,
+            "2": -0.011764705882352934
+          }
+        },
+        "346.0": {
+          "1": 0,
+          "LH": {
+            "1": -4,
+            "2": 0.011764705882352934
+          }
+        }
+      }
+    },
+    {
+      "name": "TimeSpeed1_1_3",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform6_1_1_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 34
+      }
+    },
+    {
+      "name": "Merge17",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9_1_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_4_1",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_4_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_5_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.0674521143420878,
+          "2": -0.604257096031421,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge9",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge7_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge18",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "TimeSpeed2_2",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 100.1
+      }
+    },
+    {
+      "name": "Merge7",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge8",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge16",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform12",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "ChromaKeyer1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.5,
+          "2": 0.306005626605076,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.721,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Background4",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Transform12",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Merge16",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9_1_1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_4",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_4",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_5",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.117253,
+          "2": -0.269545306906986,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Transform9_1_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.815193,
+          "2": -0.2698355,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Text1_3",
+      "type": "TextPlus",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Rectangle1_1",
+          "output": "Mask"
+        },
+        {
+          "input": "PositionOnPath",
+          "source": "Text1_3Positiononpath",
+          "output": "Value"
+        },
+        {
+          "input": "Red1",
+          "source": "Text1_3Red1",
+          "output": "Value"
+        },
+        {
+          "input": "Green1",
+          "source": "Text1_3Green1",
+          "output": "Value"
+        },
+        {
+          "input": "Blue1",
+          "source": "Text1_3Blue1",
+          "output": "Value"
+        },
+        {
+          "input": "Alpha1",
+          "source": "Text1_3Alpha1",
+          "output": "Value"
+        },
+        {
+          "input": "Red1Clone",
+          "source": "Text1_3Red1",
+          "output": "Value"
+        },
+        {
+          "input": "Green1Clone",
+          "source": "Text1_3Green1",
+          "output": "Value"
+        },
+        {
+          "input": "Blue1Clone",
+          "source": "Text1_3Blue1",
+          "output": "Value"
+        },
+        {
+          "input": "Alpha1Clone",
+          "source": "Text1_3Alpha1",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn4",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Merge6_1Blend",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "117.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.3333333333333286,
+            "2": 0.3333333333333333
+          }
+        },
+        "118.0": {
+          "1": 1,
+          "LH": {
+            "1": -0.3333333333333286,
+            "2": -0.33333333333333337
+          },
+          "RH": {
+            "1": 11.666666666666657,
+            "2": -0.33333333333333326
+          }
+        },
+        "153.0": {
+          "1": 0,
+          "LH": {
+            "1": -11.666666666666657,
+            "2": 0.33333333333333337
+          },
+          "RH": {
+            "1": 0.3333333333333428,
+            "2": 0.3333333333333333
+          }
+        },
+        "154.0": {
+          "1": 1,
+          "LH": {
+            "1": -0.3333333333333428,
+            "2": -0.33333333333333337
+          }
+        }
+      }
+    },
+    {
+      "name": "Merge6_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Blend",
+          "source": "Merge6_1Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Background",
+          "source": "Merge6",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge15",
+          "output": "Output"
+        },
+        {
+          "input": "BlendClone",
+          "source": "Merge6_1Blend",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_3",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_4",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.141716413127592,
+          "2": 0.0987925025070057,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.388161529935854,
+          "2": 0.501930718146488,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "TimeSpeed2_4",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_4_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 152.3
+      }
+    },
+    {
+      "name": "Merge6Blend",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "117.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.3333333333333286,
+            "2": 0.3333333333333333
+          }
+        },
+        "118.0": {
+          "1": 1,
+          "LH": {
+            "1": -0.3333333333333286,
+            "2": -0.33333333333333337
+          }
+        }
+      }
+    },
+    {
+      "name": "Merge6",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Blend",
+          "source": "Merge6Blend",
+          "output": "Value"
+        },
+        {
+          "input": "Background",
+          "source": "MultiMerge2",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Merge14",
+          "output": "Output"
+        },
+        {
+          "input": "BlendClone",
+          "source": "Merge6Blend",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform7_1_3",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed1_1_3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.820108769246595,
+          "2": -0.423753300616867,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge2_1",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Background1_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Background4",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "MediaIn1",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform8",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.878771,
+          "2": 0.468,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 3.871,
+        "Angle": -90
+      }
+    },
+    {
+      "name": "Merge14",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Transform9_1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform9_1_2",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "PolylineStroke1",
+      "type": "PolylineStroke",
+      "connections": [
+        {
+          "input": "WriteOnStart",
+          "source": "PolylineStroke1Start",
+          "output": "Value"
+        },
+        {
+          "input": "WriteOnEnd",
+          "source": "PolylineStroke1End",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Background2_1",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "Background3_1_1_3",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1_1_3",
+          "output": "Mask"
+        }
+      ]
+    },
+    {
+      "name": "Rectangle1_1",
+      "type": "RectangleMask",
+      "connections": [
+        {
+          "input": "Height",
+          "source": "Rectangle1_1Height",
+          "output": "Value"
+        }
+      ]
+    },
+    {
+      "name": "Transform13",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Merge1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": -0.1021355,
+          "2": -0.242799,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.952,
+        "Angle": -90
+      }
+    },
+    {
+      "name": "Background3_1_1_2",
+      "type": "Background",
+      "connections": [
+        {
+          "input": "EffectMask",
+          "source": "Ellipse1_1_1_2",
+          "output": "Mask"
+        }
+      ]
+    },
+    {
+      "name": "Transform7_1_1",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.830718066761398,
+          "2": 0.228124413186606,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Merge4",
+      "type": "Merge",
+      "connections": [
+        {
+          "input": "Background",
+          "source": "Merge1",
+          "output": "Output"
+        },
+        {
+          "input": "Foreground",
+          "source": "Transform4",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Rectangle1Height",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0.5301723,
+          "RH": {
+            "1": 4.34328358208955,
+            "2": 0.95527293880597
+          }
+        },
+        "97.0": {
+          "1": 3.6961723,
+          "LH": {
+            "1": -85.9970149253731,
+            "2": -0.05236885223881016
+          }
+        }
+      }
+    },
+    {
+      "name": "Rectangle1_1Height",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "288.0": {
+          "1": 1.4,
+          "RH": {
+            "1": 47.35302147820602,
+            "2": 0
+          }
+        },
+        "352.0": {
+          "1": 3.30848042137931,
+          "LH": {
+            "1": -47.696467020749026,
+            "2": -0.04551071619132996
+          },
+          "RH": {
+            "1": 0.6569980401990279,
+            "2": 0.0006268902753898686
+          }
+        },
+        "354.0": {
+          "1": 3.33349775346797,
+          "LH": {
+            "1": -0.6822639697979866,
+            "2": 0.00007519065307004524
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform9",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.0298779430634469,
+          "2": 0.756638,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "MultiMerge1Transform8_1LayerLayer9Blend",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "77.0": {
+          "1": 1,
+          "RH": {
+            "1": 20.676767676767696,
+            "2": 0
+          }
+        },
+        "100.0": {
+          "1": 0,
+          "LH": {
+            "1": -20.676767676767696,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Background1",
+      "type": "Background",
+      "connections": []
+    },
+    {
+      "name": "TimeSpeed1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform6_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 22
+      }
+    },
+    {
+      "name": "Text1_3Alpha1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "347.0": {
+          "1": 1,
+          "RH": {
+            "1": 3.6666666666666856,
+            "2": 0
+          }
+        },
+        "358.0": {
+          "1": 1,
+          "LH": {
+            "1": -3.6666666666666856,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Text1_3Green1",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "347.0": {
+          "1": 0.686274509803922,
+          "RH": {
+            "1": 3.6666666666666856,
+            "2": -0.2287581699346407
+          }
+        },
+        "358.0": {
+          "1": 0,
+          "LH": {
+            "1": -3.6666666666666856,
+            "2": 0.22875816993464065
+          }
+        }
+      }
+    },
+    {
+      "name": "Transform6",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Size",
+          "source": "Transform6Size",
+          "output": "Value"
+        },
+        {
+          "input": "Input",
+          "source": "Background3",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.478407964143433,
+          "2": 0.754458273150318,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 0.2,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Ellipse1_1_1_1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "TimeSpeed2_1_1_1",
+      "type": "TimeSpeed",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Text1_2_1_1_1",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Speed": 1,
+        "Delay": 187.8
+      }
+    },
+    {
+      "name": "Ellipse1_1_1_3",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "MediaIn5",
+      "type": "MediaIn",
+      "connections": [
+        {
+          "input": "LeftAudio",
+          "source": "Left",
+          "output": "Data"
+        },
+        {
+          "input": "RightAudio",
+          "source": "Right",
+          "output": "Data"
+        }
+      ]
+    },
+    {
+      "name": "Transform9_2",
+      "type": "Transform",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "TimeSpeed2_2",
+          "output": "Output"
+        }
+      ],
+      "sample": {
+        "Center": {
+          "1": 0.921196822774621,
+          "2": 0.756638,
+          "3": 0
+        },
+        "Pivot": {
+          "1": 0.5,
+          "2": 0.5,
+          "3": 0
+        },
+        "Size": 2.1,
+        "Angle": 0
+      }
+    },
+    {
+      "name": "Ellipse1_1_1_2",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "Text1_3Positiononpath",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "0.0": {
+          "1": 0.5,
+          "RH": {
+            "1": 35.6,
+            "2": 0.030000000000000027
+          }
+        },
+        "71.0": {
+          "1": 1.5,
+          "LH": {
+            "1": -62.48624861532927,
+            "2": 0.010773491140569913
+          },
+          "RH": {
+            "1": 69,
+            "2": -0.30333333333333323
+          }
+        },
+        "278.0": {
+          "1": 0.59,
+          "LH": {
+            "1": -69,
+            "2": 0.30333333333333334
+          },
+          "RH": {
+            "1": 18.600000000000023,
+            "2": 0
+          }
+        },
+        "302.0": {
+          "1": 1.336,
+          "LH": {
+            "1": -11.393939393938979,
+            "2": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "Ellipse1",
+      "type": "EllipseMask",
+      "connections": []
+    },
+    {
+      "name": "PipeRouter1",
+      "type": "PipeRouter",
+      "connections": [
+        {
+          "input": "Input",
+          "source": "Transform7",
+          "output": "Output"
+        }
+      ]
+    },
+    {
+      "name": "Background3_1TopLeftGreen",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "314.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.3333333333333144,
+            "2": 0.235294117647059
+          }
+        },
+        "315.0": {
+          "1": 0.705882352941177,
+          "LH": {
+            "1": -0.3333333333333144,
+            "2": -0.235294117647059
+          },
+          "RH": {
+            "1": 6.333333333333314,
+            "2": 0
+          }
+        },
+        "334.0": {
+          "1": 0.705882352941177,
+          "LH": {
+            "1": -6.333333333333314,
+            "2": 0
+          },
+          "RH": {
+            "1": 4,
+            "2": -0.235294117647059
+          }
+        },
+        "346.0": {
+          "1": 0,
+          "LH": {
+            "1": -4,
+            "2": 0.235294117647059
+          }
+        }
+      }
+    },
+    {
+      "name": "Background3_1TopLeftRed",
+      "type": "BezierSpline",
+      "connections": [],
+      "keys": {
+        "314.0": {
+          "1": 0,
+          "RH": {
+            "1": 0.3333333333333144,
+            "2": 0.043137254901960666
+          }
+        },
+        "315.0": {
+          "1": 0.129411764705882,
+          "LH": {
+            "1": -0.3333333333333144,
+            "2": -0.04313725490196067
+          },
+          "RH": {
+            "1": 6.333333333333314,
+            "2": 0
+          }
+        },
+        "334.0": {
+          "1": 0.129411764705882,
+          "LH": {
+            "1": -6.333333333333314,
+            "2": 0
+          },
+          "RH": {
+            "1": 4,
+            "2": 0.2901960784313727
+          }
+        },
+        "346.0": {
+          "1": 1,
+          "LH": {
+            "1": -4,
+            "2": -0.29019607843137263
+          }
+        }
+      }
+    }
+  ]
+}

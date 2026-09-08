@@ -58,6 +58,7 @@ Typotest의 단어별 리빌을 유지하면서 Inspector 컨트롤을 확장한
 
 ## 제작 지식
 
+- [로컬·글로벌 카메라 계층 상세 분석](docs/BQ_CAMERA_HIERARCHY_KO.md) — 두 번째 컴포지션 비교, 타이밍 분리, 카메라 영향 범위
 - [BQ 스타일 분석과 다음 영상 제작 플레이북](docs/BQ_STYLE_PLAYBOOK_KO.md) — 2026-09-08 라이브 그래프의 연결·키프레임 근거와 재사용 절차
 - [Fusion 제작 규칙과 스크립팅 검증](docs/FUSION_MOTION_KO.md)
 - [6개 프리셋 코드 리뷰와 확인된 결함](docs/PRESET_REVIEW_KO.md)

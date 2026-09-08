@@ -7,6 +7,7 @@
 - No proxy changes or preview renders by default. Render only when requested, e.g. for viewing away from the workstation.
 - Prefer built-in ImageGen for collage bitmap assets. Keep motion editable in Fusion.
 - One movement per Transform. Separate local motion from global pan/zoom. Add background overscan before global motion.
+- Read `docs/BQ_CAMERA_HIERARCHY_KO.md` for the user-confirmed local-element → scene-composite → global-camera hierarchy. Separate animation timing from spatial layout; define which layers bypass the camera. Counter-rotation expressions are implementation details, not a style rule. Mask reveals and mosaic are optional, never defaults.
 - For new collage graphs use native Stop Motion (`ofx.com.blackmagicdesign.resolvefx.StopMotion`, `frameRepeat=2`). Review existing presets before migrations.
 - Keep package contents, README and DRFX synchronized. Retain Codex Rise Fade Image.
 - CodexTypo must remain an expandable GroupOperator. Preserve the Follower animation unless a change is requested.
