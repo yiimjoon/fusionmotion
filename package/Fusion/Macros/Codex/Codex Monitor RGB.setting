@@ -1,0 +1,68 @@
+{
+ Tools = ordered() {
+  CodexMonitorRGB = GroupOperator {
+   Inputs = ordered() {
+    MainInput1 = InstanceInput { SourceOp = "SourceSoftness", Source = "Input", Name = "Input", },
+    Pitch = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn1", Name = "RGB Groups Across", Default = 360, },
+Strength = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn2", Name = "RGB Strength", Default = 0.7, },
+Scan = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn3", Name = "Row Gap Strength", Default = 0.035, },
+Rows = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn4", Name = "Row Count", Default = 540, },
+Tilt = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn5", Name = "Subpixel Slant", Default = 0.008, },
+Luma = InstanceInput { SourceOp = "PixelRGB", Source = "NumberIn6", Name = "Brightness Compensation", Default = 0.8, },
+SourceBlur = InstanceInput { SourceOp = "SourceSoftness", Source = "XBlurSize", Name = "Source Softness", Default = 0, },
+Warp = InstanceInput { SourceOp = "ScreenWarp", Source = "NumberIn1", Name = "Screen Curvature / Fisheye", Default = 0, MinScale = 0, MaxScale = 2, },
+Overscan = InstanceInput { SourceOp = "ScreenWarp", Source = "NumberIn2", Name = "Edge Overscan", Default = 1.015, },
+Softness = InstanceInput { SourceOp = "OpticalSoftness", Source = "XBlurSize", Name = "Optical Softness", Default = 0.08, },
+   },
+   Outputs = { MainOutput1 = InstanceOutput { SourceOp = "OpticalSoftness", Source = "Output", }, },
+   Tools = ordered() {
+    SourceSoftness = Blur {
+     Inputs = { XBlurSize = Input { Value = 0, }, },
+     ViewInfo = OperatorInfo { Pos = { -165, 0 }, },
+    },
+    PixelRGB = Custom {
+     Inputs = {
+      Image1 = Input { SourceOp = "SourceSoftness", Source = "Output", },
+      NumberIn1 = Input { Value = 360, },
+      NumberIn2 = Input { Value = 0.7, },
+      NumberIn3 = Input { Value = 0.035, },
+      NumberIn4 = Input { Value = 540, },
+      NumberIn5 = Input { Value = 0.008, },
+      NumberIn6 = Input { Value = 0.8, },
+      Intermediate1 = Input { Value = "(x+min(0.1,max(-0.1,n5))*(y-0.5))*max(1,n1)", },
+      Intermediate2 = Input { Value = "min(0.85,max(0,n2))", },
+      Intermediate3 = Input { Value = "(1-min(0.5,max(0,n3))*(0.5+0.5*cos(360*y*max(1,n4))))/(1-0.5*min(0.85,max(0,n2))*min(1,max(0,n6)))", },
+      RedExpression = Input { Value = "r1*(1-i2*(0.5-0.5*cos(360*i1)))*i3", },
+      GreenExpression = Input { Value = "g1*(1-i2*(0.5-0.5*cos(360*(i1-1/3))))*i3", },
+      BlueExpression = Input { Value = "b1*(1-i2*(0.5-0.5*cos(360*(i1-2/3))))*i3", },
+      AlphaExpression = Input { Value = "a1", },
+     },
+     ViewInfo = OperatorInfo { Pos = { 0, 0 }, },
+    },
+    ScreenWarp = Custom {
+     Inputs = {
+      Image1 = Input { SourceOp = "PixelRGB", Source = "Output", },
+      NumberIn1 = Input { Value = 0, },
+      NumberIn2 = Input { Value = 1.015, },
+      Intermediate1 = Input { Value = "0.5+(x-0.5)*(1+min(2,max(-0.8,n1))*((x-0.5)^2+(y-0.5)^2))/(max(1,n2)*(1+0.5*max(0,min(2,n1))))", },
+      Intermediate2 = Input { Value = "0.5+(y-0.5)*(1+min(2,max(-0.8,n1))*((x-0.5)^2+(y-0.5)^2))/(max(1,n2)*(1+0.5*max(0,min(2,n1))))", },
+      RedExpression = Input { Value = "getr1b(min(1,max(0,i1)),min(1,max(0,i2)))", },
+GreenExpression = Input { Value = "getg1b(min(1,max(0,i1)),min(1,max(0,i2)))", },
+BlueExpression = Input { Value = "getb1b(min(1,max(0,i1)),min(1,max(0,i2)))", },
+AlphaExpression = Input { Value = "geta1b(min(1,max(0,i1)),min(1,max(0,i2)))", },
+     },
+     ViewInfo = OperatorInfo { Pos = { 165, 0 }, },
+    },
+    OpticalSoftness = Blur {
+     Inputs = {
+      Input = Input { SourceOp = "ScreenWarp", Source = "Output", },
+      XBlurSize = Input { Value = 0.08, },
+     },
+     ViewInfo = OperatorInfo { Pos = { 330, 0 }, },
+    },
+   },
+   ViewInfo = GroupInfo { Pos = { 0, 0 }, },
+  },
+ },
+ ActiveTool = "CodexMonitorRGB"
+}

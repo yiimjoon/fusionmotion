@@ -8,6 +8,21 @@ DaVinci Resolve용 타이틀·Fusion 매크로와 실제 제작에서 검증한 
 - Effects: **`Codex Rise Fade Image` 유지**
 - Transitions: **`BQ Grid Flow`**
 - Fusion/Macros/Codex: **`CodexTypo`**, `Codex Screen Pixel Overlay`, `gridanim`
+- Fusion macro: `Codex Monitor RGB` — RGB subpixel modulation, row gaps, radial warp and optical softness. Live viewer verified on Resolve Studio 21.1.1; final export not tested.
+
+### Codex Monitor RGB
+
+Connect `MediaIn → Codex Monitor RGB → MediaOut`. When a source has downstream Color-page CST/grading, first create a **Fusion Clip** and confirm the graded image reaches its MediaIn. Apply this macro in the outer Fusion composition. Adding it to the source's original Fusion composition would send the effect through the source's CST.
+
+RGB Groups Across is the number of RGB triplets across the image (360 gives a 10.67-pixel period at 3840 width), not a pixel-size control. The user-approved close-screen preset uses RGB Strength 0.7, Row Gap Strength 0.035, Row Count 540, Subpixel Slant 0.008, Brightness Compensation 0.8, Screen Curvature 0 and Edge Overscan 1.015. Source Softness is 0 for already-filmed monitors; Optical Softness is 0.08. Blur values use Fusion units, not literal pixels. Zero RGB/row-gap/curvature/both softness controls and set overscan to 1 for neutral settings.
+
+Screen Curvature / Fisheye supports 0–2: 0 keeps the approved flat-screen look; 1.5 gives strong barrel distortion. Positive curvature automatically crops/zooms to cover the edges, so stronger values lose more peripheral content. Typed negative values are supported down to -0.8 for the opposite bend. This is a stylized radial warp, not a calibrated optical fisheye lens model.
+
+This is a separate expandable GroupOperator; the original overlay is unchanged. It uses channel multiplication so black remains black, warps the pattern and source together, and preserves input alpha through the Custom nodes. Extreme edges clamp to the source edge. No animation, external texture, or timeline range changes are introduced. Check at final resolution and 100% viewer scale.
+
+Run `scripts/review_monitor_rgb.lua` for host input/connection validation; it does not render. On 2026-10-10 the macro passed host checks and the user approved the fine RGB pattern in the live Fusion viewer on a 3840×2160 graded Fusion Clip. Custom Tool trigonometric expressions use **degrees** (`360` per cycle), unlike Lua `math.cos`; the original radians-based draft produced broad bands and was corrected. Full playback/final export are not yet validated. The macro is not included in the Edit-only DRFX.
+
+After exporting a composition snapshot, invoke `scripts/insert_monitor_rgb.lua` inside the target comp with `comp:Execute("dofile([[absolute/path/to/insert_monitor_rgb.lua]])")`. Host-context paste creates an expandable group and one Fusion undo event. The helper does not create a Fusion Clip or move grading for you.
 
 원본은 `package/Edit/Titles`, `package/Edit/Effects`, `package/Fusion/Macros/Codex`에 있습니다.
 
