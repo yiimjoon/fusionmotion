@@ -1,6 +1,6 @@
 {
 	Tools = ordered() {
-		CodexRiseFadePro = GroupOperator {
+		CodexRiseFadeProUp = GroupOperator {
 			CtrlWZoom = false,
 			Inputs = ordered() {
 				Input1 = InstanceInput {
@@ -376,5 +376,5 @@
 			},
 		}
 	},
-	ActiveTool = "CodexRiseFadePro"
+	ActiveTool = "CodexRiseFadeProUp"
 }

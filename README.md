@@ -4,7 +4,7 @@ DaVinci Resolve용 타이틀·Fusion 매크로와 실제 제작에서 검증한 
 
 ## 포함 패키지
 
-- Titles: `Codex Rise Fade`, `Codex Rise Fade Pro`, `Codex Rise Fade Pro Left / Right / Down`
+- Titles: `Codex Rise Fade`, `Codex Rise Fade Pro Up / Down / Left / Right`
 - Titles: `Codex Rise Up / Down / Left / Right`, `Codex Scale Up / Down`, `Codex Mask Reveal Pro` — 스트로크·그림자 Inspector 컨트롤
 - Effects: **`Codex Rise Fade Image` 유지**
 - Transitions: **`BQ Grid Flow`**
