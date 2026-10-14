@@ -5,6 +5,7 @@ DaVinci Resolve용 타이틀·Fusion 매크로와 실제 제작에서 검증한 
 ## 포함 패키지
 
 - Titles: `Codex Rise Fade`, `Codex Rise Fade Pro`, `Codex Rise Fade Pro Left / Right / Down`
+- Titles: `Codex Rise Up / Down / Left / Right`, `Codex Scale Up / Down`, `Codex Mask Reveal Pro` — 스트로크·그림자 Inspector 컨트롤
 - Effects: **`Codex Rise Fade Image` 유지**
 - Transitions: **`BQ Grid Flow`**
 - Fusion/Macros/Codex: **`CodexTypo`**, `Codex Screen Pixel Overlay`, `gridanim`
@@ -64,6 +65,17 @@ Typotest의 단어별 리빌을 유지하면서 Inspector 컨트롤을 확장한
 - Reveal Mask Shape / Width / Height / Softness
 
 기본 폰트는 Pretendard Bold입니다. 없는 환경에서는 사용 가능한 폰트로 바꿉니다. 단어 리빌에는 고정 키프레임이 포함되므로 모든 길이에 자동 대응한다고 가정하지 않습니다.
+
+## Rise / Scale / Mask Reveal 스타일 컨트롤
+
+Rise 네 방향, Scale Up/Down, Mask Reveal Pro의 새 인스턴스에서 다음 항목을 조절합니다.
+
+- 스트로크: 켜기, 두께, 색상, 불투명도
+- 그림자: 켜기, 색상, 불투명도, 위치, 블러
+
+기본값은 둘 다 꺼짐입니다. 기존 모션·폰트·텍스트와 Follower를 유지하며 별도 이미지 렌더 노드를 추가하지 않습니다. 스트로크·그림자는 글자의 페이드를 따르고, Mask Reveal에서는 기존 Follower의 이동·블러도 공유합니다. 파일 교체는 이미 배치한 클립에 자동 적용되지 않으므로 새 프리셋 인스턴스를 넣습니다.
+
+2026-09-30: 7개 전부 Resolve 21.1 숨겨진 임시 컴포지션에서 13개 공개 입력, 값 전달, 기존 노드·파라미터 보존과 5개 프레임의 페이드 동기화를 검사했습니다. 렌더·화면 시각 확인은 별도입니다. Codex Shin Yebin Color Cycle, 1 Minute Countdown, Slot Price는 이 패키지의 지원 목록에 포함하지 않습니다.
 
 ## Rise Fade 계열
 
